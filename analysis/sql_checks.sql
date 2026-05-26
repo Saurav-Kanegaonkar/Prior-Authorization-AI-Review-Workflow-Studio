@@ -1,17 +1,14 @@
--- Priority queue foundation
-select
-  entity_id,
-  avg(risk_score) as avg_risk_score,
-  avg(quality_score) as avg_quality_score,
-  sum(value_pool) as value_pool
-from daily_metrics
-group by 1
-order by avg_risk_score desc;
+-- SQL checks mirror the synthetic CSV outputs in this public portfolio artifact.
 
--- Action readiness
-select
-  action_type,
-  avg(expected_lift_pct) as expected_lift,
-  avg(effort_hours) as effort_hours
-from recommended_actions
-group by 1;
+select urgency, count(*) as cases
+from authorization_cases
+group by urgency;
+
+select route, count(*) as cases, avg(priority_score) as avg_priority
+from clinical_review_queue
+group by route
+order by avg_priority desc;
+
+select scenario, auto_affirm_cases, clinician_escalations, unsafe_auto_decisions_blocked
+from threshold_scenarios
+order by reviewer_hours;

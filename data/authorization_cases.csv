@@ -1,0 +1,49 @@
+case_id,procedure,specialty,urgency,intake_channel,packet_quality,missing_documents,classifier_confidence,extraction_f1,policy_match_confidence,evidence_sufficiency,rationale_completeness,clinical_risk,reviewer_minutes,sla_remaining_hours,model_recommendation
+PA-0001,Skin substitute,wound care,Standard,Portal upload,Complete,none,0.657,0.75,0.97,0.914,0.732,Low,33,51,Affirm coverage criteria met
+PA-0002,Spinal cord stimulator,pain management,Standard,Fax conversion,Partial,test_result; clinical_note,0.512,0.901,0.862,0.589,0.7,Medium,47,127,Request more information
+PA-0003,Sleep study,sleep medicine,Standard,X12 278,Complete,none,0.979,0.866,0.979,0.909,0.776,Medium,12,48,Affirm coverage criteria met
+PA-0004,Genetic test,laboratory,Standard,FHIR API,Complete,none,0.613,0.774,0.889,0.912,0.917,Medium,49,68,Affirm coverage criteria met
+PA-0005,Knee arthroscopy,orthopedics,Standard,Fax conversion,Complete,none,0.752,0.907,0.868,0.976,0.766,Medium,19,152,Affirm coverage criteria met
+PA-0006,Knee arthroscopy,orthopedics,Standard,FHIR API,Partial,conservative_therapy,0.674,0.791,0.852,0.883,0.819,Medium,24,119,Affirm coverage criteria met
+PA-0007,Knee arthroscopy,orthopedics,Standard,Fax conversion,Complete,none,0.79,0.833,0.708,0.855,0.83,Low,40,49,"Potential non-coverage, clinician required"
+PA-0008,Advanced imaging,radiology,Standard,Portal upload,Complete,none,0.939,0.962,0.99,0.902,0.755,Medium,16,61,Affirm coverage criteria met
+PA-0009,DME oxygen,durable medical equipment,Standard,FHIR API,Complete,none,0.863,0.929,0.845,0.943,0.915,Medium,36,-17,Affirm coverage criteria met
+PA-0010,Knee arthroscopy,orthopedics,Expedited,FHIR API,Complete,none,0.767,0.918,0.71,0.777,0.964,High,44,-18,Escalate to clinician
+PA-0011,Home infusion,pharmacy,Expedited,Portal upload,Complete,none,0.755,0.799,0.967,0.776,0.905,Medium,32,8,Clinical review required
+PA-0012,Genetic test,laboratory,Standard,Fax conversion,Complete,none,0.761,0.843,0.727,0.909,0.911,Low,52,11,Clinical review required
+PA-0013,Advanced imaging,radiology,Standard,Portal upload,Complete,none,0.99,0.779,0.888,0.853,0.864,Low,26,40,Affirm coverage criteria met
+PA-0014,Sleep study,sleep medicine,Standard,FHIR API,Partial,payer_policy,0.841,0.744,0.871,0.77,0.731,Low,8,157,Clinical review required
+PA-0015,Genetic test,laboratory,Expedited,FHIR API,Complete,none,0.695,0.834,0.692,0.99,0.735,Medium,38,22,"Potential non-coverage, clinician required"
+PA-0016,DME oxygen,durable medical equipment,Standard,FHIR API,Complete,none,0.804,0.691,0.934,0.923,0.905,Medium,47,-7,Affirm coverage criteria met
+PA-0017,DME oxygen,durable medical equipment,Expedited,Portal upload,Conflicting,diagnosis_history; order,0.853,0.828,0.694,0.682,0.736,Medium,20,38,Request more information
+PA-0018,DME oxygen,durable medical equipment,Standard,FHIR API,Complete,none,0.829,0.914,0.783,0.911,0.716,Medium,41,40,Clinical review required
+PA-0019,Spinal cord stimulator,pain management,Expedited,FHIR API,Complete,none,0.65,0.904,0.841,0.871,0.874,Low,48,31,Affirm coverage criteria met
+PA-0020,Skin substitute,wound care,Standard,X12 278,Complete,none,0.627,0.728,0.835,0.869,0.743,Low,31,32,Clinical review required
+PA-0021,Knee arthroscopy,orthopedics,Expedited,Portal upload,Complete,none,0.66,0.889,0.846,0.799,0.818,High,38,49,Clinical review required
+PA-0022,Knee arthroscopy,orthopedics,Standard,Fax conversion,Complete,none,0.656,0.961,0.804,0.777,0.779,Low,28,123,Clinical review required
+PA-0023,DME oxygen,durable medical equipment,Standard,Portal upload,Partial,test_result,0.82,0.871,0.778,0.966,0.839,Low,29,13,Clinical review required
+PA-0024,Spinal cord stimulator,pain management,Expedited,Portal upload,Sparse,test_result; conservative_therapy,0.797,0.68,0.848,0.755,0.835,Low,53,27,Request more information
+PA-0025,Genetic test,laboratory,Expedited,Portal upload,Complete,none,0.599,0.947,0.841,0.876,0.728,Medium,53,0,Affirm coverage criteria met
+PA-0026,Knee arthroscopy,orthopedics,Standard,FHIR API,Complete,none,0.847,0.893,0.705,0.847,0.834,High,52,93,Escalate to clinician
+PA-0027,Advanced imaging,radiology,Standard,Portal upload,Complete,none,0.912,0.825,0.932,0.948,0.737,Low,8,102,Affirm coverage criteria met
+PA-0028,Home infusion,pharmacy,Expedited,Portal upload,Complete,none,0.798,0.875,0.859,0.981,0.99,Medium,32,27,Affirm coverage criteria met
+PA-0029,Home infusion,pharmacy,Standard,FHIR API,Partial,diagnosis_history; test_result,0.937,0.737,0.935,0.714,0.924,High,36,26,Request more information
+PA-0030,Knee arthroscopy,orthopedics,Standard,Portal upload,Complete,none,0.806,0.917,0.841,0.978,0.939,Medium,25,79,Affirm coverage criteria met
+PA-0031,Knee arthroscopy,orthopedics,Standard,FHIR API,Sparse,clinical_note; diagnosis_history; conservative_therapy,0.838,0.766,0.675,0.613,0.635,Low,27,115,Request more information
+PA-0032,Advanced imaging,radiology,Standard,FHIR API,Partial,test_result,0.969,0.783,0.965,0.779,0.787,Low,21,13,Clinical review required
+PA-0033,DME oxygen,durable medical equipment,Standard,FHIR API,Complete,none,0.676,0.758,0.798,0.894,0.899,Low,25,54,Clinical review required
+PA-0034,Home infusion,pharmacy,Standard,FHIR API,Complete,none,0.99,0.883,0.793,0.99,0.825,Low,17,-8,Clinical review required
+PA-0035,Home infusion,pharmacy,Standard,Fax conversion,Complete,none,0.99,0.967,0.883,0.989,0.901,Medium,32,80,Affirm coverage criteria met
+PA-0036,Sleep study,sleep medicine,Standard,FHIR API,Complete,none,0.99,0.87,0.99,0.762,0.752,Medium,29,117,Clinical review required
+PA-0037,Skin substitute,wound care,Standard,Portal upload,Complete,none,0.827,0.889,0.929,0.934,0.903,Medium,36,96,Affirm coverage criteria met
+PA-0038,Advanced imaging,radiology,Standard,FHIR API,Complete,none,0.795,0.818,0.834,0.924,0.947,Medium,12,0,Clinical review required
+PA-0039,Advanced imaging,radiology,Standard,FHIR API,Complete,none,0.864,0.924,0.885,0.76,0.717,High,29,12,Clinical review required
+PA-0040,Home infusion,pharmacy,Standard,FHIR API,Partial,order,0.799,0.842,0.837,0.801,0.792,Medium,15,83,Clinical review required
+PA-0041,Spinal cord stimulator,pain management,Standard,X12 278,Complete,none,0.827,0.903,0.747,0.92,0.68,Low,43,28,Clinical review required
+PA-0042,Skin substitute,wound care,Standard,FHIR API,Sparse,clinical_note; conservative_therapy; order,0.802,0.599,0.745,0.755,0.762,Low,19,113,Request more information
+PA-0043,Home infusion,pharmacy,Standard,FHIR API,Complete,none,0.832,0.934,0.911,0.819,0.978,High,47,95,Clinical review required
+PA-0044,Genetic test,laboratory,Standard,Portal upload,Partial,test_result,0.775,0.915,0.702,0.645,0.853,Medium,47,91,"Potential non-coverage, clinician required"
+PA-0045,Genetic test,laboratory,Standard,FHIR API,Partial,conservative_therapy,0.717,0.77,0.878,0.768,0.769,Medium,28,95,Clinical review required
+PA-0046,Spinal cord stimulator,pain management,Standard,Portal upload,Complete,none,0.598,0.835,0.775,0.931,0.824,Medium,56,147,Clinical review required
+PA-0047,Home infusion,pharmacy,Expedited,FHIR API,Sparse,order; conservative_therapy,0.76,0.691,0.868,0.786,0.876,Medium,17,20,Request more information
+PA-0048,Spinal cord stimulator,pain management,Standard,Portal upload,Partial,payer_policy,0.741,0.895,0.747,0.747,0.811,Low,53,36,Clinical review required

@@ -1,0 +1,32 @@
+feedback_id,case_id,theme,severity,owner,reviewer_note,closed_loop_action
+FB-0001,PA-0001,Policy version mismatch,Medium,Clinical policy ops,The rationale references an older policy clause.,Refresh policy index and lock rationale to active policy date.
+FB-0002,PA-0002,Ambiguous urgency signal,High,Classifier prompt,The model treated a standard request as expedited based on weak language.,Tune classifier prompt with urgency counterexamples.
+FB-0003,PA-0003,Ambiguous urgency signal,Medium,Classifier prompt,The model treated a standard request as expedited based on weak language.,Tune classifier prompt with urgency counterexamples.
+FB-0004,PA-0004,Missing conservative therapy duration,High,Document AI,Reviewer could not verify duration from the submitted notes.,Add duration extractor and reviewer checklist item.
+FB-0006,PA-0006,Extracted diagnosis needs citation,Medium,Extraction prompt,Diagnosis code is plausible but needs a source sentence pointer.,Require quote-level citation before rationale generation.
+FB-0009,PA-0009,Rationale needs patient-specific language,High,Clinical QA,Summary is clinically coherent but too generic for the packet.,Add rationale rubric and QA prompt examples.
+FB-0010,PA-0010,Policy version mismatch,Medium,Clinical policy ops,The rationale references an older policy clause.,Refresh policy index and lock rationale to active policy date.
+FB-0013,PA-0013,Extracted diagnosis needs citation,Medium,Extraction prompt,Diagnosis code is plausible but needs a source sentence pointer.,Require quote-level citation before rationale generation.
+FB-0014,PA-0014,Ambiguous urgency signal,High,Classifier prompt,The model treated a standard request as expedited based on weak language.,Tune classifier prompt with urgency counterexamples.
+FB-0017,PA-0017,Missing conservative therapy duration,Medium,Document AI,Reviewer could not verify duration from the submitted notes.,Add duration extractor and reviewer checklist item.
+FB-0019,PA-0019,Policy version mismatch,Medium,Clinical policy ops,The rationale references an older policy clause.,Refresh policy index and lock rationale to active policy date.
+FB-0021,PA-0021,Extracted diagnosis needs citation,High,Extraction prompt,Diagnosis code is plausible but needs a source sentence pointer.,Require quote-level citation before rationale generation.
+FB-0022,PA-0022,Policy version mismatch,Medium,Clinical policy ops,The rationale references an older policy clause.,Refresh policy index and lock rationale to active policy date.
+FB-0023,PA-0023,Rationale needs patient-specific language,Medium,Clinical QA,Summary is clinically coherent but too generic for the packet.,Add rationale rubric and QA prompt examples.
+FB-0024,PA-0024,Duplicate document packet,High,Intake workflow,Intake included repeated pages that inflated evidence counts.,Add duplicate-page detector before extraction.
+FB-0025,PA-0025,Policy version mismatch,Medium,Clinical policy ops,The rationale references an older policy clause.,Refresh policy index and lock rationale to active policy date.
+FB-0026,PA-0026,Duplicate document packet,High,Intake workflow,Intake included repeated pages that inflated evidence counts.,Add duplicate-page detector before extraction.
+FB-0027,PA-0027,Missing conservative therapy duration,Low,Document AI,Reviewer could not verify duration from the submitted notes.,Add duration extractor and reviewer checklist item.
+FB-0029,PA-0029,Missing conservative therapy duration,High,Document AI,Reviewer could not verify duration from the submitted notes.,Add duration extractor and reviewer checklist item.
+FB-0031,PA-0031,Ambiguous urgency signal,Medium,Classifier prompt,The model treated a standard request as expedited based on weak language.,Tune classifier prompt with urgency counterexamples.
+FB-0032,PA-0032,Rationale needs patient-specific language,High,Clinical QA,Summary is clinically coherent but too generic for the packet.,Add rationale rubric and QA prompt examples.
+FB-0034,PA-0034,Duplicate document packet,Low,Intake workflow,Intake included repeated pages that inflated evidence counts.,Add duplicate-page detector before extraction.
+FB-0035,PA-0035,Ambiguous urgency signal,Low,Classifier prompt,The model treated a standard request as expedited based on weak language.,Tune classifier prompt with urgency counterexamples.
+FB-0036,PA-0036,Extracted diagnosis needs citation,Medium,Extraction prompt,Diagnosis code is plausible but needs a source sentence pointer.,Require quote-level citation before rationale generation.
+FB-0040,PA-0040,Missing conservative therapy duration,High,Document AI,Reviewer could not verify duration from the submitted notes.,Add duration extractor and reviewer checklist item.
+FB-0042,PA-0042,Missing conservative therapy duration,Medium,Document AI,Reviewer could not verify duration from the submitted notes.,Add duration extractor and reviewer checklist item.
+FB-0043,PA-0043,Missing conservative therapy duration,Medium,Document AI,Reviewer could not verify duration from the submitted notes.,Add duration extractor and reviewer checklist item.
+FB-0044,PA-0044,Extracted diagnosis needs citation,High,Extraction prompt,Diagnosis code is plausible but needs a source sentence pointer.,Require quote-level citation before rationale generation.
+FB-0045,PA-0045,Missing conservative therapy duration,High,Document AI,Reviewer could not verify duration from the submitted notes.,Add duration extractor and reviewer checklist item.
+FB-0047,PA-0047,Rationale needs patient-specific language,Low,Clinical QA,Summary is clinically coherent but too generic for the packet.,Add rationale rubric and QA prompt examples.
+FB-0048,PA-0048,Ambiguous urgency signal,High,Classifier prompt,The model treated a standard request as expedited based on weak language.,Tune classifier prompt with urgency counterexamples.

@@ -1,0 +1,49 @@
+case_id,procedure,urgency,route,priority_score,sla_remaining_hours,reviewer_minutes,classifier_confidence,extraction_f1,policy_match_confidence,evidence_sufficiency,model_recommendation,escalation_reason,unsafe_auto_decision_blocked
+PA-0010,Knee arthroscopy,Expedited,Escalate to licensed clinician,71.2,-18,44,0.767,0.918,0.71,0.777,Escalate to clinician,Clinical risk or possible adverse determination,no
+PA-0029,Home infusion,Standard,Request missing documentation,60.4,26,36,0.937,0.737,0.935,0.714,Request more information,Missing diagnosis_history; test_result,no
+PA-0009,DME oxygen,Standard,Auto-affirm with audit trace,52.9,-17,36,0.863,0.929,0.845,0.943,Affirm coverage criteria met,Meets all confidence and evidence gates,no
+PA-0025,Genetic test,Expedited,Expedite reviewer queue,52.7,0,53,0.599,0.947,0.841,0.876,Affirm coverage criteria met,CMS clock risk,no
+PA-0016,DME oxygen,Standard,Expedite reviewer queue,52.5,-7,47,0.804,0.691,0.934,0.923,Affirm coverage criteria met,CMS clock risk,no
+PA-0002,Spinal cord stimulator,Standard,Request missing documentation,51.0,127,47,0.512,0.901,0.862,0.589,Request more information,Missing test_result; clinical_note,no
+PA-0047,Home infusion,Expedited,Request missing documentation,49.6,20,17,0.76,0.691,0.868,0.786,Request more information,Missing order; conservative_therapy,no
+PA-0039,Advanced imaging,Standard,Escalate to licensed clinician,46.7,12,29,0.864,0.924,0.885,0.76,Clinical review required,Clinical risk or possible adverse determination,no
+PA-0023,DME oxygen,Standard,Request missing documentation,46.2,13,29,0.82,0.871,0.778,0.966,Clinical review required,Missing test_result,no
+PA-0044,Genetic test,Standard,Request missing documentation,46.1,91,47,0.775,0.915,0.702,0.645,"Potential non-coverage, clinician required",Missing test_result,no
+PA-0032,Advanced imaging,Standard,Request missing documentation,44.0,13,21,0.969,0.783,0.965,0.779,Clinical review required,Missing test_result,no
+PA-0024,Spinal cord stimulator,Expedited,Request missing documentation,43.9,27,53,0.797,0.68,0.848,0.755,Request more information,Missing test_result; conservative_therapy,no
+PA-0006,Knee arthroscopy,Standard,Request missing documentation,41.6,119,24,0.674,0.791,0.852,0.883,Affirm coverage criteria met,Missing conservative_therapy,no
+PA-0045,Genetic test,Standard,Request missing documentation,41.0,95,28,0.717,0.77,0.878,0.768,Clinical review required,Missing conservative_therapy,no
+PA-0017,DME oxygen,Expedited,Request missing documentation,40.3,38,20,0.853,0.828,0.694,0.682,Request more information,Missing diagnosis_history; order,no
+PA-0038,Advanced imaging,Standard,Expedite reviewer queue,39.0,0,12,0.795,0.818,0.834,0.924,Clinical review required,CMS clock risk,no
+PA-0011,Home infusion,Expedited,Expedite reviewer queue,38.7,8,32,0.755,0.799,0.967,0.776,Clinical review required,CMS clock risk,no
+PA-0026,Knee arthroscopy,Standard,Escalate to licensed clinician,37.7,93,52,0.847,0.893,0.705,0.847,Escalate to clinician,Clinical risk or possible adverse determination,no
+PA-0034,Home infusion,Standard,Expedite reviewer queue,37.2,-8,17,0.99,0.883,0.793,0.99,Clinical review required,CMS clock risk,no
+PA-0048,Spinal cord stimulator,Standard,Request missing documentation,36.7,36,53,0.741,0.895,0.747,0.747,Clinical review required,Missing payer_policy,no
+PA-0021,Knee arthroscopy,Expedited,Escalate to licensed clinician,36.6,49,38,0.66,0.889,0.846,0.799,Clinical review required,Clinical risk or possible adverse determination,no
+PA-0040,Home infusion,Standard,Request missing documentation,36.0,83,15,0.799,0.842,0.837,0.801,Clinical review required,Missing order,no
+PA-0031,Knee arthroscopy,Standard,Request missing documentation,35.5,115,27,0.838,0.766,0.675,0.613,Request more information,Missing clinical_note; diagnosis_history; conservative_therapy,no
+PA-0042,Skin substitute,Standard,Request missing documentation,34.5,113,19,0.802,0.599,0.745,0.755,Request more information,Missing clinical_note; conservative_therapy; order,no
+PA-0012,Genetic test,Standard,Expedite reviewer queue,33.2,11,52,0.761,0.843,0.727,0.909,Clinical review required,CMS clock risk,no
+PA-0015,Genetic test,Expedited,Escalate to licensed clinician,32.7,22,38,0.695,0.834,0.692,0.99,"Potential non-coverage, clinician required",Clinical risk or possible adverse determination,no
+PA-0043,Home infusion,Standard,Escalate to licensed clinician,32.7,95,47,0.832,0.934,0.911,0.819,Clinical review required,Clinical risk or possible adverse determination,no
+PA-0046,Spinal cord stimulator,Standard,Clinical QA review,29.8,147,56,0.598,0.835,0.775,0.931,Clinical review required,Low confidence in one or more pipeline stages,no
+PA-0004,Genetic test,Standard,Clinical QA review,28.1,68,49,0.613,0.774,0.889,0.912,Affirm coverage criteria met,Low confidence in one or more pipeline stages,no
+PA-0014,Sleep study,Standard,Request missing documentation,27.9,157,8,0.841,0.744,0.871,0.77,Clinical review required,Missing payer_policy,no
+PA-0028,Home infusion,Expedited,Clinical QA review,25.0,27,32,0.798,0.875,0.859,0.981,Affirm coverage criteria met,Low confidence in one or more pipeline stages,no
+PA-0019,Spinal cord stimulator,Expedited,Clinical QA review,22.0,31,48,0.65,0.904,0.841,0.871,Affirm coverage criteria met,Low confidence in one or more pipeline stages,no
+PA-0018,DME oxygen,Standard,Clinical QA review,21.2,40,41,0.829,0.914,0.783,0.911,Clinical review required,Low confidence in one or more pipeline stages,no
+PA-0041,Spinal cord stimulator,Standard,Clinical QA review,19.9,28,43,0.827,0.903,0.747,0.92,Clinical review required,Low confidence in one or more pipeline stages,no
+PA-0036,Sleep study,Standard,Clinical QA review,19.1,117,29,0.99,0.87,0.99,0.762,Clinical review required,Low confidence in one or more pipeline stages,no
+PA-0020,Skin substitute,Standard,Clinical QA review,19.0,32,31,0.627,0.728,0.835,0.869,Clinical review required,Low confidence in one or more pipeline stages,no
+PA-0037,Skin substitute,Standard,Clinical QA review,18.9,96,36,0.827,0.889,0.929,0.934,Affirm coverage criteria met,Reviewer validation before decision release,no
+PA-0005,Knee arthroscopy,Standard,Clinical QA review,18.2,152,19,0.752,0.907,0.868,0.976,Affirm coverage criteria met,Low confidence in one or more pipeline stages,no
+PA-0035,Home infusion,Standard,Auto-affirm with audit trace,17.8,80,32,0.99,0.967,0.883,0.989,Affirm coverage criteria met,Meets all confidence and evidence gates,no
+PA-0030,Knee arthroscopy,Standard,Clinical QA review,17.6,79,25,0.806,0.917,0.841,0.978,Affirm coverage criteria met,Low confidence in one or more pipeline stages,no
+PA-0001,Skin substitute,Standard,Clinical QA review,15.8,51,33,0.657,0.75,0.97,0.914,Affirm coverage criteria met,Low confidence in one or more pipeline stages,no
+PA-0007,Knee arthroscopy,Standard,Escalate to licensed clinician,15.4,49,40,0.79,0.833,0.708,0.855,"Potential non-coverage, clinician required",Clinical risk or possible adverse determination,no
+PA-0008,Advanced imaging,Standard,Auto-affirm with audit trace,14.9,61,16,0.939,0.962,0.99,0.902,Affirm coverage criteria met,Meets all confidence and evidence gates,no
+PA-0022,Knee arthroscopy,Standard,Clinical QA review,14.9,123,28,0.656,0.961,0.804,0.777,Clinical review required,Low confidence in one or more pipeline stages,no
+PA-0003,Sleep study,Standard,Auto-affirm with audit trace,14.2,48,12,0.979,0.866,0.979,0.909,Affirm coverage criteria met,Meets all confidence and evidence gates,no
+PA-0033,DME oxygen,Standard,Clinical QA review,13.7,54,25,0.676,0.758,0.798,0.894,Clinical review required,Low confidence in one or more pipeline stages,no
+PA-0013,Advanced imaging,Standard,Clinical QA review,10.0,40,26,0.99,0.779,0.888,0.853,Affirm coverage criteria met,Low confidence in one or more pipeline stages,no
+PA-0027,Advanced imaging,Standard,Auto-affirm with audit trace,5.4,102,8,0.912,0.825,0.932,0.948,Affirm coverage criteria met,Meets all confidence and evidence gates,no

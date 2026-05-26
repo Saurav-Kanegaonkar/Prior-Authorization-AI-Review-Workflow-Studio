@@ -1,0 +1,7 @@
+theme,affected_cases,high_severity_count,medium_severity_count,owner,closed_loop_action,feedback_priority_score
+Missing conservative therapy duration,8,4,3,Document AI,Add duration extractor and reviewer checklist item.,22.6
+Ambiguous urgency signal,6,3,2,Classifier prompt,Tune classifier prompt with urgency counterexamples.,16.6
+Extracted diagnosis needs citation,5,2,3,Extraction prompt,Require quote-level citation before rationale generation.,14.2
+Policy version mismatch,5,0,5,Clinical policy ops,Refresh policy index and lock rationale to active policy date.,11.0
+Rationale needs patient-specific language,4,2,1,Clinical QA,Add rationale rubric and QA prompt examples.,10.6
+Duplicate document packet,3,2,0,Intake workflow,Add duplicate-page detector before extraction.,8.4

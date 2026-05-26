@@ -1,0 +1,4 @@
+scenario,classifier_threshold,extraction_threshold,policy_threshold,evidence_threshold,auto_affirm_cases,clinical_review_cases,clinician_escalations,missing_doc_requests,expedited_queue_cases,reviewer_hours,unsafe_auto_decisions_blocked
+Conservative,0.9,0.88,0.9,0.88,1,18,7,15,7,25.9,0
+Balanced,0.8,0.78,0.8,0.78,7,13,7,15,6,23.4,1
+Aggressive,0.77,0.76,0.78,0.76,9,11,7,15,6,22.4,2

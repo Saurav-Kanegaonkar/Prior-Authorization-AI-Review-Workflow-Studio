@@ -1,0 +1,6 @@
+control,status,evidence,product_behavior
+CMS turnaround clock,Watch,44 of 48 cases remain inside the active clock.,Surface SLA pressure and move near-breach cases into expedited reviewer worklists.
+No automated adverse determination,Ready,2 potential non-coverage cases are routed to licensed clinicians.,Allow auto-affirm only. Require human clinical review for adverse or high-risk outcomes.
+FHIR prior authorization readiness,In progress,"FHIR API, X12 278, portal, and fax conversion channels are tracked separately.",Normalize intake events into a single case packet with source-channel lineage.
+Audit trace completeness,Watch,10 of 48 cases have sufficient confidence and rationale trace fields.,"Require source citation, policy version, confidence score, reviewer action, and rationale snapshot."
+Documentation sufficiency,Watch,33 of 48 cases avoid missing-document routing.,Ask for missing evidence before clinical QA when required packet elements are absent.

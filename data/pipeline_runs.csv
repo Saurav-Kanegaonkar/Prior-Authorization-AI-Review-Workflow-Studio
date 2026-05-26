@@ -1,0 +1,193 @@
+case_id,stage,score,threshold,stage_status,latency_seconds
+PA-0001,Classification,0.657,0.84,Review,101
+PA-0001,Document extraction,0.75,0.82,Review,106
+PA-0001,Clinical QA,0.914,0.82,Pass,93
+PA-0001,Decision support,0.97,0.84,Pass,118
+PA-0002,Classification,0.512,0.84,Review,110
+PA-0002,Document extraction,0.901,0.82,Pass,153
+PA-0002,Clinical QA,0.589,0.82,Review,101
+PA-0002,Decision support,0.862,0.84,Pass,100
+PA-0003,Classification,0.979,0.84,Pass,92
+PA-0003,Document extraction,0.866,0.82,Pass,127
+PA-0003,Clinical QA,0.909,0.82,Pass,140
+PA-0003,Decision support,0.979,0.84,Pass,132
+PA-0004,Classification,0.613,0.84,Review,98
+PA-0004,Document extraction,0.774,0.82,Review,101
+PA-0004,Clinical QA,0.912,0.82,Pass,160
+PA-0004,Decision support,0.889,0.84,Pass,138
+PA-0005,Classification,0.752,0.84,Review,143
+PA-0005,Document extraction,0.907,0.82,Pass,95
+PA-0005,Clinical QA,0.976,0.82,Pass,146
+PA-0005,Decision support,0.868,0.84,Pass,91
+PA-0006,Classification,0.674,0.84,Review,142
+PA-0006,Document extraction,0.791,0.82,Review,152
+PA-0006,Clinical QA,0.883,0.82,Pass,131
+PA-0006,Decision support,0.852,0.84,Pass,111
+PA-0007,Classification,0.79,0.84,Review,110
+PA-0007,Document extraction,0.833,0.82,Pass,104
+PA-0007,Clinical QA,0.855,0.82,Pass,106
+PA-0007,Decision support,0.708,0.84,Review,109
+PA-0008,Classification,0.939,0.84,Pass,113
+PA-0008,Document extraction,0.962,0.82,Pass,85
+PA-0008,Clinical QA,0.902,0.82,Pass,120
+PA-0008,Decision support,0.99,0.84,Pass,116
+PA-0009,Classification,0.863,0.84,Pass,139
+PA-0009,Document extraction,0.929,0.82,Pass,169
+PA-0009,Clinical QA,0.943,0.82,Pass,116
+PA-0009,Decision support,0.845,0.84,Pass,152
+PA-0010,Classification,0.767,0.84,Review,103
+PA-0010,Document extraction,0.918,0.82,Pass,128
+PA-0010,Clinical QA,0.777,0.82,Review,102
+PA-0010,Decision support,0.71,0.84,Review,84
+PA-0011,Classification,0.755,0.84,Review,129
+PA-0011,Document extraction,0.799,0.82,Review,112
+PA-0011,Clinical QA,0.776,0.82,Review,103
+PA-0011,Decision support,0.967,0.84,Pass,102
+PA-0012,Classification,0.761,0.84,Review,122
+PA-0012,Document extraction,0.843,0.82,Pass,76
+PA-0012,Clinical QA,0.909,0.82,Pass,120
+PA-0012,Decision support,0.727,0.84,Review,131
+PA-0013,Classification,0.99,0.84,Pass,127
+PA-0013,Document extraction,0.779,0.82,Review,109
+PA-0013,Clinical QA,0.853,0.82,Pass,118
+PA-0013,Decision support,0.888,0.84,Pass,128
+PA-0014,Classification,0.841,0.84,Pass,111
+PA-0014,Document extraction,0.744,0.82,Review,132
+PA-0014,Clinical QA,0.77,0.82,Review,151
+PA-0014,Decision support,0.871,0.84,Pass,113
+PA-0015,Classification,0.695,0.84,Review,114
+PA-0015,Document extraction,0.834,0.82,Pass,124
+PA-0015,Clinical QA,0.99,0.82,Pass,115
+PA-0015,Decision support,0.692,0.84,Review,123
+PA-0016,Classification,0.804,0.84,Review,137
+PA-0016,Document extraction,0.691,0.82,Review,109
+PA-0016,Clinical QA,0.923,0.82,Pass,113
+PA-0016,Decision support,0.934,0.84,Pass,137
+PA-0017,Classification,0.853,0.84,Pass,122
+PA-0017,Document extraction,0.828,0.82,Pass,112
+PA-0017,Clinical QA,0.682,0.82,Review,126
+PA-0017,Decision support,0.694,0.84,Review,132
+PA-0018,Classification,0.829,0.84,Review,143
+PA-0018,Document extraction,0.914,0.82,Pass,138
+PA-0018,Clinical QA,0.911,0.82,Pass,120
+PA-0018,Decision support,0.783,0.84,Review,115
+PA-0019,Classification,0.65,0.84,Review,179
+PA-0019,Document extraction,0.904,0.82,Pass,95
+PA-0019,Clinical QA,0.871,0.82,Pass,102
+PA-0019,Decision support,0.841,0.84,Pass,100
+PA-0020,Classification,0.627,0.84,Review,86
+PA-0020,Document extraction,0.728,0.82,Review,115
+PA-0020,Clinical QA,0.869,0.82,Pass,105
+PA-0020,Decision support,0.835,0.84,Review,132
+PA-0021,Classification,0.66,0.84,Review,97
+PA-0021,Document extraction,0.889,0.82,Pass,92
+PA-0021,Clinical QA,0.799,0.82,Review,127
+PA-0021,Decision support,0.846,0.84,Pass,125
+PA-0022,Classification,0.656,0.84,Review,126
+PA-0022,Document extraction,0.961,0.82,Pass,144
+PA-0022,Clinical QA,0.777,0.82,Review,112
+PA-0022,Decision support,0.804,0.84,Review,123
+PA-0023,Classification,0.82,0.84,Review,115
+PA-0023,Document extraction,0.871,0.82,Pass,139
+PA-0023,Clinical QA,0.966,0.82,Pass,159
+PA-0023,Decision support,0.778,0.84,Review,133
+PA-0024,Classification,0.797,0.84,Review,129
+PA-0024,Document extraction,0.68,0.82,Review,107
+PA-0024,Clinical QA,0.755,0.82,Review,94
+PA-0024,Decision support,0.848,0.84,Pass,107
+PA-0025,Classification,0.599,0.84,Review,131
+PA-0025,Document extraction,0.947,0.82,Pass,111
+PA-0025,Clinical QA,0.876,0.82,Pass,110
+PA-0025,Decision support,0.841,0.84,Pass,121
+PA-0026,Classification,0.847,0.84,Pass,108
+PA-0026,Document extraction,0.893,0.82,Pass,105
+PA-0026,Clinical QA,0.847,0.82,Pass,137
+PA-0026,Decision support,0.705,0.84,Review,140
+PA-0027,Classification,0.912,0.84,Pass,101
+PA-0027,Document extraction,0.825,0.82,Pass,76
+PA-0027,Clinical QA,0.948,0.82,Pass,95
+PA-0027,Decision support,0.932,0.84,Pass,124
+PA-0028,Classification,0.798,0.84,Review,146
+PA-0028,Document extraction,0.875,0.82,Pass,153
+PA-0028,Clinical QA,0.981,0.82,Pass,116
+PA-0028,Decision support,0.859,0.84,Pass,121
+PA-0029,Classification,0.937,0.84,Pass,108
+PA-0029,Document extraction,0.737,0.82,Review,132
+PA-0029,Clinical QA,0.714,0.82,Review,124
+PA-0029,Decision support,0.935,0.84,Pass,123
+PA-0030,Classification,0.806,0.84,Review,102
+PA-0030,Document extraction,0.917,0.82,Pass,105
+PA-0030,Clinical QA,0.978,0.82,Pass,139
+PA-0030,Decision support,0.841,0.84,Pass,128
+PA-0031,Classification,0.838,0.84,Review,123
+PA-0031,Document extraction,0.766,0.82,Review,116
+PA-0031,Clinical QA,0.613,0.82,Review,113
+PA-0031,Decision support,0.675,0.84,Review,98
+PA-0032,Classification,0.969,0.84,Pass,136
+PA-0032,Document extraction,0.783,0.82,Review,136
+PA-0032,Clinical QA,0.779,0.82,Review,126
+PA-0032,Decision support,0.965,0.84,Pass,79
+PA-0033,Classification,0.676,0.84,Review,106
+PA-0033,Document extraction,0.758,0.82,Review,104
+PA-0033,Clinical QA,0.894,0.82,Pass,133
+PA-0033,Decision support,0.798,0.84,Review,125
+PA-0034,Classification,0.99,0.84,Pass,133
+PA-0034,Document extraction,0.883,0.82,Pass,141
+PA-0034,Clinical QA,0.99,0.82,Pass,106
+PA-0034,Decision support,0.793,0.84,Review,99
+PA-0035,Classification,0.99,0.84,Pass,145
+PA-0035,Document extraction,0.967,0.82,Pass,118
+PA-0035,Clinical QA,0.989,0.82,Pass,136
+PA-0035,Decision support,0.883,0.84,Pass,127
+PA-0036,Classification,0.99,0.84,Pass,121
+PA-0036,Document extraction,0.87,0.82,Pass,125
+PA-0036,Clinical QA,0.762,0.82,Review,120
+PA-0036,Decision support,0.99,0.84,Pass,123
+PA-0037,Classification,0.827,0.84,Review,133
+PA-0037,Document extraction,0.889,0.82,Pass,117
+PA-0037,Clinical QA,0.934,0.82,Pass,129
+PA-0037,Decision support,0.929,0.84,Pass,158
+PA-0038,Classification,0.795,0.84,Review,113
+PA-0038,Document extraction,0.818,0.82,Review,125
+PA-0038,Clinical QA,0.924,0.82,Pass,138
+PA-0038,Decision support,0.834,0.84,Review,81
+PA-0039,Classification,0.864,0.84,Pass,138
+PA-0039,Document extraction,0.924,0.82,Pass,101
+PA-0039,Clinical QA,0.76,0.82,Review,145
+PA-0039,Decision support,0.885,0.84,Pass,86
+PA-0040,Classification,0.799,0.84,Review,126
+PA-0040,Document extraction,0.842,0.82,Pass,120
+PA-0040,Clinical QA,0.801,0.82,Review,111
+PA-0040,Decision support,0.837,0.84,Review,93
+PA-0041,Classification,0.827,0.84,Review,124
+PA-0041,Document extraction,0.903,0.82,Pass,128
+PA-0041,Clinical QA,0.92,0.82,Pass,132
+PA-0041,Decision support,0.747,0.84,Review,95
+PA-0042,Classification,0.802,0.84,Review,145
+PA-0042,Document extraction,0.599,0.82,Review,93
+PA-0042,Clinical QA,0.755,0.82,Review,137
+PA-0042,Decision support,0.745,0.84,Review,114
+PA-0043,Classification,0.832,0.84,Review,112
+PA-0043,Document extraction,0.934,0.82,Pass,142
+PA-0043,Clinical QA,0.819,0.82,Review,153
+PA-0043,Decision support,0.911,0.84,Pass,119
+PA-0044,Classification,0.775,0.84,Review,124
+PA-0044,Document extraction,0.915,0.82,Pass,125
+PA-0044,Clinical QA,0.645,0.82,Review,132
+PA-0044,Decision support,0.702,0.84,Review,138
+PA-0045,Classification,0.717,0.84,Review,64
+PA-0045,Document extraction,0.77,0.82,Review,98
+PA-0045,Clinical QA,0.768,0.82,Review,141
+PA-0045,Decision support,0.878,0.84,Pass,114
+PA-0046,Classification,0.598,0.84,Review,128
+PA-0046,Document extraction,0.835,0.82,Pass,114
+PA-0046,Clinical QA,0.931,0.82,Pass,120
+PA-0046,Decision support,0.775,0.84,Review,117
+PA-0047,Classification,0.76,0.84,Review,135
+PA-0047,Document extraction,0.691,0.82,Review,117
+PA-0047,Clinical QA,0.786,0.82,Review,97
+PA-0047,Decision support,0.868,0.84,Pass,131
+PA-0048,Classification,0.741,0.84,Review,106
+PA-0048,Document extraction,0.895,0.82,Pass,159
+PA-0048,Clinical QA,0.747,0.82,Review,133
+PA-0048,Decision support,0.747,0.84,Review,135

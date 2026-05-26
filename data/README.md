@@ -1,8 +1,11 @@
-# Data Sources
+# Data README
 
-Synthetic source-style data for healthcare AI prior authorization, document extraction, and human review workflow design.
+All datasets are deterministic synthetic data for a public portfolio artifact. They do not represent real patients, providers, payer decisions, Medicare cases, clinical documents, utilization management queues, or production model performance.
 
-- `entities.csv`: 36 authorization case records.
-- `daily_metrics.csv`: 5,040 authorization case-day metric rows.
-- `source_events.csv`: 760 operational events, QA checks, experiments, and stakeholder asks.
-- `recommended_actions.csv`: 220 candidate actions with effort and expected lift.
+The synthetic structure is modeled on a prior authorization workflow with intake, document extraction, clinical policy matching, clinical QA, decision support, reviewer feedback, and compliance controls. Randomness is seeded in `scripts/score_operating_data.py` so the outputs are reproducible.
+
+Generated files:
+
+- `authorization_cases.csv`: PHI-free case packets with procedure category, urgency, intake channel, document sufficiency, model confidence, clinical risk, and reviewer effort.
+- `pipeline_runs.csv`: stage-level confidence and latency rows for classification, extraction, clinical QA, and decision support.
+- `reviewer_feedback.csv`: synthetic reviewer notes used to close the loop with prompt, extraction, policy-index, and intake workflow fixes.

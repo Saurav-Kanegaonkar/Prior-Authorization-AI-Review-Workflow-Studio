@@ -2,14 +2,14 @@
 
 ## What I analyzed
 
-I joined 5,040 daily metric rows, 760 source events, and 220 action candidates for healthcare AI prior authorization, document extraction, and human review workflow design.
+I generated 48 synthetic Medicare prior authorization case packets and scored them across classification, extraction, clinical QA, decision support, reviewer feedback, and compliance controls.
 
 ## Findings
 
-- The highest-priority authorization case is AUT012 with a priority score of 99.41.
-- The top queue combines 54.3 average risk with 80.2 quality score and $831,273 estimated impact.
-- The strongest use case is turning repeated stakeholder questions into a ranked operating digest.
+- The balanced threshold policy auto-affirms 7 cases and keeps 1 unsafe automation candidates behind guardrails.
+- The highest-priority work item is PA-0010 for Knee arthroscopy, routed to Escalate to licensed clinician because clinical risk or possible adverse determination.
+- The most important feedback loop is Missing conservative therapy duration, affecting 8 cases and owned by Document AI.
 
 ## Recommendation
 
-Prioritize the top queue before scaling more dashboards. The project should help leaders decide which authorization case risks need action, validation, or monitoring.
+Use the balanced threshold policy as the default operating mode. Keep auto-affirm narrow, route missing-document cases before clinical QA, and turn reviewer feedback into weekly prompt, extraction, and policy-index changes.

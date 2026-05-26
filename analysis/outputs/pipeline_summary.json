@@ -1,0 +1,293 @@
+{
+  "stageCards": [
+    {
+      "label": "Cases in pipeline",
+      "value": "48",
+      "detail": "8 near CMS clock breach"
+    },
+    {
+      "label": "Auto-affirm eligible",
+      "value": "7",
+      "detail": "Only coverage-met cases with complete evidence"
+    },
+    {
+      "label": "Reviewer hours",
+      "value": "23.4",
+      "detail": "Balanced threshold scenario"
+    },
+    {
+      "label": "Missing-doc packets",
+      "value": "15",
+      "detail": "Routed before clinical QA"
+    }
+  ],
+  "routeCounts": {
+    "Escalate to licensed clinician": 7,
+    "Request missing documentation": 15,
+    "Auto-affirm with audit trace": 5,
+    "Expedite reviewer queue": 6,
+    "Clinical QA review": 15
+  },
+  "topCases": [
+    {
+      "case_id": "PA-0010",
+      "procedure": "Knee arthroscopy",
+      "urgency": "Expedited",
+      "route": "Escalate to licensed clinician",
+      "priority_score": 71.2,
+      "sla_remaining_hours": -18,
+      "reviewer_minutes": 44,
+      "classifier_confidence": 0.767,
+      "extraction_f1": 0.918,
+      "policy_match_confidence": 0.71,
+      "evidence_sufficiency": 0.777,
+      "model_recommendation": "Escalate to clinician",
+      "escalation_reason": "Clinical risk or possible adverse determination",
+      "unsafe_auto_decision_blocked": "no"
+    },
+    {
+      "case_id": "PA-0029",
+      "procedure": "Home infusion",
+      "urgency": "Standard",
+      "route": "Request missing documentation",
+      "priority_score": 60.4,
+      "sla_remaining_hours": 26,
+      "reviewer_minutes": 36,
+      "classifier_confidence": 0.937,
+      "extraction_f1": 0.737,
+      "policy_match_confidence": 0.935,
+      "evidence_sufficiency": 0.714,
+      "model_recommendation": "Request more information",
+      "escalation_reason": "Missing diagnosis_history; test_result",
+      "unsafe_auto_decision_blocked": "no"
+    },
+    {
+      "case_id": "PA-0009",
+      "procedure": "DME oxygen",
+      "urgency": "Standard",
+      "route": "Auto-affirm with audit trace",
+      "priority_score": 52.9,
+      "sla_remaining_hours": -17,
+      "reviewer_minutes": 36,
+      "classifier_confidence": 0.863,
+      "extraction_f1": 0.929,
+      "policy_match_confidence": 0.845,
+      "evidence_sufficiency": 0.943,
+      "model_recommendation": "Affirm coverage criteria met",
+      "escalation_reason": "Meets all confidence and evidence gates",
+      "unsafe_auto_decision_blocked": "no"
+    },
+    {
+      "case_id": "PA-0025",
+      "procedure": "Genetic test",
+      "urgency": "Expedited",
+      "route": "Expedite reviewer queue",
+      "priority_score": 52.7,
+      "sla_remaining_hours": 0,
+      "reviewer_minutes": 53,
+      "classifier_confidence": 0.599,
+      "extraction_f1": 0.947,
+      "policy_match_confidence": 0.841,
+      "evidence_sufficiency": 0.876,
+      "model_recommendation": "Affirm coverage criteria met",
+      "escalation_reason": "CMS clock risk",
+      "unsafe_auto_decision_blocked": "no"
+    },
+    {
+      "case_id": "PA-0016",
+      "procedure": "DME oxygen",
+      "urgency": "Standard",
+      "route": "Expedite reviewer queue",
+      "priority_score": 52.5,
+      "sla_remaining_hours": -7,
+      "reviewer_minutes": 47,
+      "classifier_confidence": 0.804,
+      "extraction_f1": 0.691,
+      "policy_match_confidence": 0.934,
+      "evidence_sufficiency": 0.923,
+      "model_recommendation": "Affirm coverage criteria met",
+      "escalation_reason": "CMS clock risk",
+      "unsafe_auto_decision_blocked": "no"
+    },
+    {
+      "case_id": "PA-0002",
+      "procedure": "Spinal cord stimulator",
+      "urgency": "Standard",
+      "route": "Request missing documentation",
+      "priority_score": 51.0,
+      "sla_remaining_hours": 127,
+      "reviewer_minutes": 47,
+      "classifier_confidence": 0.512,
+      "extraction_f1": 0.901,
+      "policy_match_confidence": 0.862,
+      "evidence_sufficiency": 0.589,
+      "model_recommendation": "Request more information",
+      "escalation_reason": "Missing test_result; clinical_note",
+      "unsafe_auto_decision_blocked": "no"
+    },
+    {
+      "case_id": "PA-0047",
+      "procedure": "Home infusion",
+      "urgency": "Expedited",
+      "route": "Request missing documentation",
+      "priority_score": 49.6,
+      "sla_remaining_hours": 20,
+      "reviewer_minutes": 17,
+      "classifier_confidence": 0.76,
+      "extraction_f1": 0.691,
+      "policy_match_confidence": 0.868,
+      "evidence_sufficiency": 0.786,
+      "model_recommendation": "Request more information",
+      "escalation_reason": "Missing order; conservative_therapy",
+      "unsafe_auto_decision_blocked": "no"
+    },
+    {
+      "case_id": "PA-0039",
+      "procedure": "Advanced imaging",
+      "urgency": "Standard",
+      "route": "Escalate to licensed clinician",
+      "priority_score": 46.7,
+      "sla_remaining_hours": 12,
+      "reviewer_minutes": 29,
+      "classifier_confidence": 0.864,
+      "extraction_f1": 0.924,
+      "policy_match_confidence": 0.885,
+      "evidence_sufficiency": 0.76,
+      "model_recommendation": "Clinical review required",
+      "escalation_reason": "Clinical risk or possible adverse determination",
+      "unsafe_auto_decision_blocked": "no"
+    }
+  ],
+  "thresholds": [
+    {
+      "scenario": "Conservative",
+      "classifier_threshold": 0.9,
+      "extraction_threshold": 0.88,
+      "policy_threshold": 0.9,
+      "evidence_threshold": 0.88,
+      "auto_affirm_cases": 1,
+      "clinical_review_cases": 18,
+      "clinician_escalations": 7,
+      "missing_doc_requests": 15,
+      "expedited_queue_cases": 7,
+      "reviewer_hours": 25.9,
+      "unsafe_auto_decisions_blocked": 0
+    },
+    {
+      "scenario": "Balanced",
+      "classifier_threshold": 0.8,
+      "extraction_threshold": 0.78,
+      "policy_threshold": 0.8,
+      "evidence_threshold": 0.78,
+      "auto_affirm_cases": 7,
+      "clinical_review_cases": 13,
+      "clinician_escalations": 7,
+      "missing_doc_requests": 15,
+      "expedited_queue_cases": 6,
+      "reviewer_hours": 23.4,
+      "unsafe_auto_decisions_blocked": 1
+    },
+    {
+      "scenario": "Aggressive",
+      "classifier_threshold": 0.77,
+      "extraction_threshold": 0.76,
+      "policy_threshold": 0.78,
+      "evidence_threshold": 0.76,
+      "auto_affirm_cases": 9,
+      "clinical_review_cases": 11,
+      "clinician_escalations": 7,
+      "missing_doc_requests": 15,
+      "expedited_queue_cases": 6,
+      "reviewer_hours": 22.4,
+      "unsafe_auto_decisions_blocked": 2
+    }
+  ],
+  "feedback": [
+    {
+      "theme": "Missing conservative therapy duration",
+      "affected_cases": 8,
+      "high_severity_count": 4,
+      "medium_severity_count": 3,
+      "owner": "Document AI",
+      "closed_loop_action": "Add duration extractor and reviewer checklist item.",
+      "feedback_priority_score": 22.6
+    },
+    {
+      "theme": "Ambiguous urgency signal",
+      "affected_cases": 6,
+      "high_severity_count": 3,
+      "medium_severity_count": 2,
+      "owner": "Classifier prompt",
+      "closed_loop_action": "Tune classifier prompt with urgency counterexamples.",
+      "feedback_priority_score": 16.6
+    },
+    {
+      "theme": "Extracted diagnosis needs citation",
+      "affected_cases": 5,
+      "high_severity_count": 2,
+      "medium_severity_count": 3,
+      "owner": "Extraction prompt",
+      "closed_loop_action": "Require quote-level citation before rationale generation.",
+      "feedback_priority_score": 14.2
+    },
+    {
+      "theme": "Policy version mismatch",
+      "affected_cases": 5,
+      "high_severity_count": 0,
+      "medium_severity_count": 5,
+      "owner": "Clinical policy ops",
+      "closed_loop_action": "Refresh policy index and lock rationale to active policy date.",
+      "feedback_priority_score": 11.0
+    },
+    {
+      "theme": "Rationale needs patient-specific language",
+      "affected_cases": 4,
+      "high_severity_count": 2,
+      "medium_severity_count": 1,
+      "owner": "Clinical QA",
+      "closed_loop_action": "Add rationale rubric and QA prompt examples.",
+      "feedback_priority_score": 10.6
+    },
+    {
+      "theme": "Duplicate document packet",
+      "affected_cases": 3,
+      "high_severity_count": 2,
+      "medium_severity_count": 0,
+      "owner": "Intake workflow",
+      "closed_loop_action": "Add duplicate-page detector before extraction.",
+      "feedback_priority_score": 8.4
+    }
+  ],
+  "compliance": [
+    {
+      "control": "CMS turnaround clock",
+      "status": "Watch",
+      "evidence": "44 of 48 cases remain inside the active clock.",
+      "product_behavior": "Surface SLA pressure and move near-breach cases into expedited reviewer worklists."
+    },
+    {
+      "control": "No automated adverse determination",
+      "status": "Ready",
+      "evidence": "2 potential non-coverage cases are routed to licensed clinicians.",
+      "product_behavior": "Allow auto-affirm only. Require human clinical review for adverse or high-risk outcomes."
+    },
+    {
+      "control": "FHIR prior authorization readiness",
+      "status": "In progress",
+      "evidence": "FHIR API, X12 278, portal, and fax conversion channels are tracked separately.",
+      "product_behavior": "Normalize intake events into a single case packet with source-channel lineage."
+    },
+    {
+      "control": "Audit trace completeness",
+      "status": "Watch",
+      "evidence": "10 of 48 cases have sufficient confidence and rationale trace fields.",
+      "product_behavior": "Require source citation, policy version, confidence score, reviewer action, and rationale snapshot."
+    },
+    {
+      "control": "Documentation sufficiency",
+      "status": "Watch",
+      "evidence": "33 of 48 cases avoid missing-document routing.",
+      "product_behavior": "Ask for missing evidence before clinical QA when required packet elements are absent."
+    }
+  ]
+}
