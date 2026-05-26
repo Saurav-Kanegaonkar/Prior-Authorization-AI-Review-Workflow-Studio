@@ -1,0 +1,26 @@
+entity_id,entity_name,segment,priority_score,avg_risk_score,avg_quality_score,estimated_impact
+AUT012,Authorization case 12,Strategic,99.41,54.3,80.2,831273
+AUT030,Authorization case 30,Watch,92.27,56.2,80.3,716048
+AUT003,Authorization case 3,Core,90.30,51.9,81.5,730991
+AUT008,Authorization case 8,Growth,88.46,50.3,80.3,713914
+AUT016,Authorization case 16,Growth,85.05,49.7,81.1,674773
+AUT031,Authorization case 31,Core,85.01,49.8,80.9,672413
+AUT011,Authorization case 11,Strategic,84.28,50.8,82.2,658916
+AUT004,Authorization case 4,Growth,84.24,53.0,82.2,639915
+AUT022,Authorization case 22,Watch,83.96,52.2,80.0,632921
+AUT007,Authorization case 7,Growth,81.56,52.4,82.1,606676
+AUT036,Authorization case 36,Growth,81.45,52.5,81.4,601231
+AUT009,Authorization case 9,Strategic,79.32,50.7,80.5,583319
+AUT027,Authorization case 27,Growth,79.06,51.8,81.6,574829
+AUT032,Authorization case 32,Watch,78.97,48.6,81.4,600262
+AUT029,Authorization case 29,Watch,78.87,53.0,81.1,559911
+AUT019,Authorization case 19,Growth,78.11,47.6,78.4,584067
+AUT025,Authorization case 25,Core,77.65,46.2,81.1,601043
+AUT026,Authorization case 26,Growth,77.51,53.1,78.9,529873
+AUT023,Authorization case 23,Strategic,77.37,52.8,79.5,532865
+AUT018,Authorization case 18,Growth,76.86,51.1,80.8,546261
+AUT001,Authorization case 1,Core,76.15,51.9,81.7,533831
+AUT017,Authorization case 17,Core,74.56,47.6,81.2,546624
+AUT034,Authorization case 34,Watch,73.01,51.7,81.2,489039
+AUT014,Authorization case 14,Strategic,72.23,49.4,80.5,495044
+AUT005,Authorization case 5,Core,71.43,54.2,80.3,441392
