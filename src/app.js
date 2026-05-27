@@ -4,6 +4,7 @@ const tabs = [
   { id: "command", label: "Pipeline" },
   { id: "thresholds", label: "Thresholds" },
   { id: "review", label: "Clinical QA" },
+  { id: "architecture", label: "Architecture" },
   { id: "feedback", label: "Feedback" },
 ];
 
@@ -205,6 +206,66 @@ function renderReview() {
   `;
 }
 
+function renderArchitecture() {
+  return `
+    <section class="surface-grid architecture-grid">
+      <article class="panel architecture-panel">
+        <div class="panel-head split">
+          <div>
+            <span class="eyebrow">Architecture and prompt lab</span>
+            <h2>Model contracts by pipeline stage</h2>
+          </div>
+          <p>Each stage has a clear model choice, prompt contract, output contract, evaluation metric, and human guardrail so product and ML engineering can debate behavior instead of vague automation.</p>
+        </div>
+        <div class="architecture-list">
+          ${data.architecture
+            .map(
+              (stage) => `
+                <article class="architecture-item">
+                  <div>
+                    <span class="eyebrow">${stage.stage}</span>
+                    <h3>${stage.model_choice}</h3>
+                    <p>${stage.prompt_contract}</p>
+                  </div>
+                  <dl class="architecture-facts">
+                    <div><dt>Inputs</dt><dd>${stage.input_signals}</dd></div>
+                    <div><dt>Output</dt><dd>${stage.output_contract}</dd></div>
+                    <div><dt>Guardrail</dt><dd>${stage.human_guardrail}</dd></div>
+                    <div><dt>Metric</dt><dd>${stage.eval_metric}</dd></div>
+                  </dl>
+                  <p class="deploy-note">${stage.deploy_note}</p>
+                </article>
+              `
+            )
+            .join("")}
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <span class="eyebrow">Integration readiness</span>
+          <h2>Healthcare workflow contracts</h2>
+        </div>
+        <div class="control-list">
+          ${data.interoperability
+            .map(
+              (item) => `
+                <div class="control-item integration-item">
+                  <span class="pill ${item.status === "Design ready" ? "good" : "warn"}">${item.status}</span>
+                  <strong>${item.interface}</strong>
+                  <p>${item.required_behavior}</p>
+                  <small>${item.product_decision}</small>
+                  <b>${item.risk}</b>
+                </div>
+              `
+            )
+            .join("")}
+        </div>
+      </article>
+    </section>
+  `;
+}
+
 function renderFeedback() {
   return `
     <section class="surface-grid two">
@@ -258,6 +319,7 @@ function renderFeedback() {
 function render() {
   if (activeTab === "thresholds") renderShell(renderThresholds());
   else if (activeTab === "review") renderShell(renderReview());
+  else if (activeTab === "architecture") renderShell(renderArchitecture());
   else if (activeTab === "feedback") renderShell(renderFeedback());
   else renderShell(renderCommandCenter());
 }

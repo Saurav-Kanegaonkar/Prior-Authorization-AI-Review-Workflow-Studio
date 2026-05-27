@@ -9,3 +9,5 @@ Generated files:
 - `authorization_cases.csv`: PHI-free case packets with procedure category, urgency, intake channel, document sufficiency, model confidence, clinical risk, and reviewer effort.
 - `pipeline_runs.csv`: stage-level confidence and latency rows for classification, extraction, clinical QA, and decision support.
 - `reviewer_feedback.csv`: synthetic reviewer notes used to close the loop with prompt, extraction, policy-index, and intake workflow fixes.
+- `analysis/outputs/model_architecture_decisions.csv`: product and ML engineering contract for each model stage, including model choice, prompt contract, output contract, evaluation metric, and human guardrail.
+- `analysis/outputs/interoperability_readiness.csv`: FHIR, X12, HL7-style, reviewer workbench, and audit export readiness controls.

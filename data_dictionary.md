@@ -9,4 +9,6 @@
 | `analysis/outputs/clinical_review_queue.csv` | Prioritized case | Reviewer worklist scored by confidence gap, missing evidence, clinical risk, SLA pressure, and reviewer effort. |
 | `analysis/outputs/feedback_loop_queue.csv` | Feedback theme | Aggregated reviewer feedback with affected cases, severity mix, owner, action, and priority score. |
 | `analysis/outputs/compliance_readiness.csv` | Product control | Product behavior mapped to CMS clock handling, human review guardrails, interoperability readiness, audit trace completeness, and documentation sufficiency. |
+| `analysis/outputs/model_architecture_decisions.csv` | Pipeline stage | Model choice, prompt contract, output contract, evaluation metric, human guardrail, and deployment note for each AI stage. |
+| `analysis/outputs/interoperability_readiness.csv` | Interface control | FHIR, X12, HL7-style intake, reviewer workbench, and audit export readiness controls. |
 | `analysis/outputs/pipeline_summary.json` | App payload | JSON payload used by the static app to render all interactive surfaces. |

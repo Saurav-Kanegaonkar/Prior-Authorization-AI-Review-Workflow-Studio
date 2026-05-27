@@ -23,6 +23,7 @@ const shots = [
   { tab: "Pipeline", file: "pipeline-command-center.png" },
   { tab: "Thresholds", file: "threshold-studio.png" },
   { tab: "Clinical QA", file: "clinical-qa-workbench.png" },
+  { tab: "Architecture", file: "architecture-prompt-lab.png" },
   { tab: "Feedback", file: "feedback-compliance-loop.png" },
 ];
 

@@ -52,6 +52,97 @@ OWNER_MAP = {
     "Duplicate document packet": "Intake workflow",
 }
 
+MODEL_ARCHITECTURE = [
+    {
+        "stage": "Intake classification",
+        "model_choice": "Small supervised classifier plus LLM fallback",
+        "prompt_contract": "Classify request type, urgency, channel, and specialty with no clinical determination.",
+        "input_signals": "Procedure text, CPT family, diagnosis text, channel metadata, urgency language",
+        "output_contract": "Specialty, urgency, request class, confidence, and reason codes",
+        "human_guardrail": "Urgency conflicts and low confidence route to clinical QA before clock assignment.",
+        "eval_metric": "Macro F1 and urgency false-negative rate",
+        "deploy_note": "Runs first so every downstream agent receives the same case envelope.",
+    },
+    {
+        "stage": "Document extraction",
+        "model_choice": "OCR plus document AI extractor",
+        "prompt_contract": "Extract dated evidence, source page, diagnosis, therapy history, and test results.",
+        "input_signals": "PDF pages, fax packets, CCDA sections, portal attachments, duplicate-page score",
+        "output_contract": "Structured evidence table with citation anchors and missing-field flags",
+        "human_guardrail": "No generated evidence can enter the rationale unless it has a source citation.",
+        "eval_metric": "Field-level F1, citation coverage, and duplicate-page precision",
+        "deploy_note": "Keeps reviewer trust high by showing where each evidence claim came from.",
+    },
+    {
+        "stage": "Policy retrieval",
+        "model_choice": "RAG over active medical necessity policy index",
+        "prompt_contract": "Retrieve active criteria only, reject expired policy clauses, and quote criterion text.",
+        "input_signals": "Specialty, procedure, payer policy date, diagnosis, requested site of service",
+        "output_contract": "Policy criteria, version date, source citation, and retrieval confidence",
+        "human_guardrail": "Version mismatch blocks automation and creates a policy-ops work item.",
+        "eval_metric": "Top-k policy recall and active-version accuracy",
+        "deploy_note": "Separates policy lookup from clinical reasoning so updates are auditable.",
+    },
+    {
+        "stage": "Clinical QA reasoning",
+        "model_choice": "Large language model with criteria-by-criteria rubric",
+        "prompt_contract": "Compare extracted evidence to each criterion and mark met, unmet, or unknown.",
+        "input_signals": "Evidence table, retrieved criteria, contraindication flags, reviewer rubric",
+        "output_contract": "Criterion findings, uncertainty notes, rationale draft, and escalation reason",
+        "human_guardrail": "Any unmet or unknown criterion routes to licensed clinical review.",
+        "eval_metric": "Reviewer agreement, unsupported-claim rate, and rationale completeness",
+        "deploy_note": "Designed for decision support only, with no automated adverse determination.",
+    },
+    {
+        "stage": "Decision release",
+        "model_choice": "Rules engine plus audit ledger",
+        "prompt_contract": "Apply threshold policy and generate release packet only for eligible affirmations.",
+        "input_signals": "Stage confidences, evidence sufficiency, clinical risk, SLA clock, reviewer action",
+        "output_contract": "Route, reviewer task, denial-reason requirement, audit snapshot, and API response state",
+        "human_guardrail": "Auto-affirm only when all gates pass and no non-coverage path is present.",
+        "eval_metric": "Unsafe automation blocks, turnaround compliance, and audit completeness",
+        "deploy_note": "Makes probabilistic output operational by binding scores to product behavior.",
+    },
+]
+
+INTEROPERABILITY_CONTROLS = [
+    {
+        "interface": "FHIR Prior Authorization API",
+        "status": "Design ready",
+        "required_behavior": "Receive request, expose documentation requirements, return approval, denial reason, or more information.",
+        "product_decision": "Map every case packet to a normalized request state and response status.",
+        "risk": "Missing source-channel lineage makes API responses hard to audit.",
+    },
+    {
+        "interface": "X12 278 and 275",
+        "status": "Design ready",
+        "required_behavior": "Support EDI prior authorization request and attachment workflows where trading partners require them.",
+        "product_decision": "Preserve EDI transaction IDs beside normalized FHIR-style case identifiers.",
+        "risk": "Attachment gaps can create false missing-document tasks.",
+    },
+    {
+        "interface": "HL7 v2, C-CDA, and PDF intake",
+        "status": "Needs validation",
+        "required_behavior": "Turn clinical notes, observations, orders, and scanned packets into reviewer-ready evidence.",
+        "product_decision": "Run duplicate-page detection and citation extraction before clinical QA.",
+        "risk": "OCR quality and document order can distort evidence sufficiency.",
+    },
+    {
+        "interface": "Reviewer workbench",
+        "status": "Design ready",
+        "required_behavior": "Show model confidence, cited evidence, policy version, SLA clock, route, and reviewer action.",
+        "product_decision": "Keep model uncertainty visible instead of hiding it behind a single recommendation.",
+        "risk": "Reviewers may override without structured feedback unless the action form is constrained.",
+    },
+    {
+        "interface": "Audit and metrics export",
+        "status": "Needs validation",
+        "required_behavior": "Publish turnaround, approval, denial, more-information, and decision reason metrics.",
+        "product_decision": "Log every route change with threshold policy, user, timestamp, and rationale snapshot.",
+        "risk": "Incomplete audit fields weaken compliance reporting and root-cause analysis.",
+    },
+]
+
 
 def clamp(value, low, high):
     return max(low, min(high, value))
@@ -456,6 +547,8 @@ def create_summary(cases, review_queue, threshold_rows, feedback_rows, complianc
         "routeCounts": dict(route_counts),
         "topCases": review_queue[:8],
         "thresholds": threshold_rows,
+        "architecture": MODEL_ARCHITECTURE,
+        "interoperability": INTEROPERABILITY_CONTROLS,
         "feedback": feedback_rows,
         "compliance": compliance_rows,
     }
@@ -497,7 +590,8 @@ def write_analysis_docs(cases, review_queue, threshold_rows, feedback_rows):
                 "3. Compare conservative, balanced, and aggressive confidence threshold policies.",
                 "4. Build a clinical review queue that prioritizes SLA pressure, missing evidence, clinical risk, and confidence gaps.",
                 "5. Aggregate reviewer feedback into model, prompt, policy, and intake remediation actions.",
-                "6. Map the product behavior to CMS turnaround clocks, human review guardrails, interoperability readiness, and audit trace needs.",
+                "6. Define model selection, prompt contracts, evaluation metrics, and human guardrails by pipeline stage.",
+                "7. Map product behavior to CMS turnaround clocks, human review guardrails, interoperability readiness, and audit trace needs.",
                 "",
             ]
         )
@@ -519,6 +613,14 @@ def write_analysis_docs(cases, review_queue, threshold_rows, feedback_rows):
                 "select scenario, auto_affirm_cases, clinician_escalations, unsafe_auto_decisions_blocked",
                 "from threshold_scenarios",
                 "order by reviewer_hours;",
+                "",
+                "select stage, model_choice, eval_metric",
+                "from model_architecture_decisions",
+                "order by stage;",
+                "",
+                "select interface, status, risk",
+                "from interoperability_readiness",
+                "where status <> 'Design ready';",
                 "",
             ]
         )
@@ -546,6 +648,16 @@ def main():
     write_csv(OUTPUT_DIR / "clinical_review_queue.csv", review_queue, list(review_queue[0].keys()))
     write_csv(OUTPUT_DIR / "feedback_loop_queue.csv", feedback_rows, list(feedback_rows[0].keys()))
     write_csv(OUTPUT_DIR / "compliance_readiness.csv", compliance_rows, list(compliance_rows[0].keys()))
+    write_csv(
+        OUTPUT_DIR / "model_architecture_decisions.csv",
+        MODEL_ARCHITECTURE,
+        list(MODEL_ARCHITECTURE[0].keys()),
+    )
+    write_csv(
+        OUTPUT_DIR / "interoperability_readiness.csv",
+        INTEROPERABILITY_CONTROLS,
+        list(INTEROPERABILITY_CONTROLS[0].keys()),
+    )
     (OUTPUT_DIR / "pipeline_summary.json").write_text(json.dumps(summary, indent=2))
     (SRC_DIR / "data.js").write_text("window.STUDIO_DATA = " + json.dumps(summary, indent=2) + ";\n")
 
@@ -563,6 +675,8 @@ def main():
                 "- `authorization_cases.csv`: PHI-free case packets with procedure category, urgency, intake channel, document sufficiency, model confidence, clinical risk, and reviewer effort.",
                 "- `pipeline_runs.csv`: stage-level confidence and latency rows for classification, extraction, clinical QA, and decision support.",
                 "- `reviewer_feedback.csv`: synthetic reviewer notes used to close the loop with prompt, extraction, policy-index, and intake workflow fixes.",
+                "- `analysis/outputs/model_architecture_decisions.csv`: product and ML engineering contract for each model stage, including model choice, prompt contract, output contract, evaluation metric, and human guardrail.",
+                "- `analysis/outputs/interoperability_readiness.csv`: FHIR, X12, HL7-style, reviewer workbench, and audit export readiness controls.",
                 "",
             ]
         )

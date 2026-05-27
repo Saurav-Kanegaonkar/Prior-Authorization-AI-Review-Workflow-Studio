@@ -467,6 +467,63 @@ td span {
   border-radius: 8px;
 }
 
+.architecture-grid {
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+}
+
+.architecture-list {
+  display: grid;
+  gap: 14px;
+}
+
+.architecture-item {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(320px, 1.15fr) minmax(180px, 0.55fr);
+  gap: 16px;
+  padding: 16px;
+  background: #f7fafc;
+  border: 1px solid #e5edf4;
+  border-radius: 8px;
+}
+
+.architecture-item h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.architecture-item p {
+  margin-bottom: 0;
+}
+
+.architecture-facts {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.architecture-facts div {
+  display: grid;
+  gap: 4px;
+}
+
+.architecture-facts dd,
+.deploy-note {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.deploy-note {
+  align-self: center;
+  padding: 12px;
+  color: #24405f;
+  background: #eaf3ff;
+  border: 1px solid #d4e7ff;
+  border-radius: 8px;
+  font-weight: 750;
+}
+
 .control-item {
   padding: 14px;
   background: #f7fafc;
@@ -479,15 +536,26 @@ td span {
 }
 
 .control-item small {
+  display: block;
   color: #526173;
   line-height: 1.4;
+}
+
+.integration-item b {
+  display: block;
+  margin-top: 10px;
+  color: var(--amber);
+  font-size: 13px;
+  line-height: 1.35;
 }
 
 @media (max-width: 980px) {
   .hero,
   .metrics-grid,
   .surface-grid.two,
-  .threshold-grid {
+  .threshold-grid,
+  .architecture-grid,
+  .architecture-item {
     grid-template-columns: 1fr;
   }
 

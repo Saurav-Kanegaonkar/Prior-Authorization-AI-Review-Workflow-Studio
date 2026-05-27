@@ -5,4 +5,5 @@
 3. Compare conservative, balanced, and aggressive confidence threshold policies.
 4. Build a clinical review queue that prioritizes SLA pressure, missing evidence, clinical risk, and confidence gaps.
 5. Aggregate reviewer feedback into model, prompt, policy, and intake remediation actions.
-6. Map the product behavior to CMS turnaround clocks, human review guardrails, interoperability readiness, and audit trace needs.
+6. Define model selection, prompt contracts, evaluation metrics, and human guardrails by pipeline stage.
+7. Map product behavior to CMS turnaround clocks, human review guardrails, interoperability readiness, and audit trace needs.
